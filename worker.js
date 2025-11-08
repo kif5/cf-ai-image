@@ -193,6 +193,9 @@ export default {
             // Only prompt and steps
             inputs = {
               prompt: data.prompt || 'cyberpunk cat',
+              // 修复 BUG: 增加 width 和 height 参数，否则模型使用默认尺寸 (1024x1024)
+              width: data.width || 1024,
+              height: data.height || 1024,
               steps: steps
             };
           } else if (
